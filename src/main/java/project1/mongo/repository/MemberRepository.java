@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface MemberRepository extends MongoRepository<Member, Integer>  {
 
-    //@Query("{id :?0}")
-    List<Member> getMembersBy(Integer id);
+    @Query("{id :?0}")  // select * from member where id = ?
+    Optional<Member> getMemberBy(Integer id);
 }

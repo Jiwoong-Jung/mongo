@@ -30,4 +30,8 @@ public class Team {
         this.id = id;
         this.teamName = teamName;
     }
+
+    public void addMember(Member member) {
+        memberList.add(member);
+    }
 }
